@@ -1,0 +1,175 @@
+# thinkpad yoga system setup
+# most of this will need to be done as root
+# sudo -i
+# installing AUR packages should not be done as root
+
+# add a normal user, with zsh
+pacman -S zsh
+useradd -m -G wheel -s /bin/zsh myusername
+passwd myusername
+
+# power management
+pacman -S powertop
+pacman -S tlp
+pacman -S acpid
+
+# gui stuff
+pacman -S gvim
+pacman -S dmenu
+pacman -S rxvt-unicode
+pacman -S rxvt-unicode-terminfo
+pacman -S xorg
+pacman -S i3
+pacman -S xorg-xinit
+
+echo "exec i3" >> ~/.xinitrc
+
+# startx should work now
+
+# web browsing
+pacman -S firefox
+
+# aur wrapper
+pacman -S git
+
+mkdir aur && cd aur
+
+# I started with yaourt
+#git clone https://aur.archlinux.org/package-query.git && pushd package-query && makepkg -si && popd
+#git clone https://aur.archlinux.org/yaourt.git && pushd yaourt && makepkg -si && popd
+
+# if you use yaourt you may want namcap
+# to validate packages from aur
+#pacman -S namcap
+
+# but since then, I have switched to pacaur, I found yaourt annoying
+git clone https://aur.archlinux.org/cower.git && pushd cower && makepkg -si && popd
+git clone https://aur.archlinux.org/pacaur.git && pushd pacaur && makepkg -si && popd
+
+
+# finish the date / time setup
+# manually
+timedatectl set-time "yyyy-MM-dd hh:mm"
+hwclock --systohc
+# using ntp
+timedatectl set-ntp true
+systemctl enable systemd-timesyncd
+
+
+# keybase setup
+# if root, su - user
+
+pacaur -S keybase
+run_keybase
+
+keybase login
+
+pacman -S rsync
+# rsync / symlink in dotfiles from /keybase/private/
+
+# fonts
+pacman -S ttf-fira-mono ttf-fira-sans
+pacman -S terminus-font
+pacman -S ttf-droid
+pacman -S ttf-ubuntu-font-family
+pacman -S ttf-liberation
+pacman -S ttf-dejavu
+pacman -S awesome-terminal-fonts
+
+# display manager / gui login
+
+# tried gdm, ended up not liking it
+# pacman -S gdm
+
+# switched to lightdm w/ gtk greeter
+pacman -S lightdm
+pacman -S lightdm-gtk-greeter
+pacman -S lightdm-gtk-greeter-settings
+# themes
+pacman -S adapta-gtk-theme
+pacman -S arc-gtk-theme
+pacman -S gtk-engine-murrine
+pacman -S numix-gtk-theme
+
+# edit /etc/lxdm/lxdm.conf
+# lxdm themes: /usr/share/lxdm/themes
+# gtk themes: /usr/share/themes
+
+# audio
+
+# for some reason alsa didn't work until after I rebooted
+# not sure what I did wrong, perhaps forgot to modprobe something
+pacman -S alsa-utils
+
+# fixes for screen tearing in x11
+pacman -S compton
+echo "exec compton" >> .config/i3/config
+
+# fan
+pacman -S acpi
+pacaur -S thinkfan
+
+# wacom tablet / touchscreen
+pacman -S xf86-input-wacom
+pacman -S onboard
+
+# http://www.davidrevoy.com/article182/calibrating-wacom-stylus-pressure-on-krita
+
+
+# drawing tools
+pacman -S krita
+pacman -S gimp
+pacman -S mypaint
+
+# wallpaper
+pacman -S feh
+
+# pick a random photo every session
+echo "exec feh --bg-fill --randomize ~/.wallpaper/*" >> ~/.config/i3/config
+
+# keyboard functions
+
+# ~/.config/i3/config
+# ~/.config/i3status/config
+
+# lock screen
+pacman -S i3lock
+pacman -S xautolock
+pacaur -S xss-lock
+
+# lock on suspend
+echo "ExecStart=/usr/bin/loginctl lock-sessions" >> /etc/systemd/sleep.conf
+
+
+# webcam
+
+echo "options uvcvideo nodrop=1" | sudo tee /etc/modprobe.d/uvcvideo.conf
+
+modprobe uvcvideo
+
+pacman -S guvcview
+
+
+# bluetooth
+
+pacman -S bluez
+pacman -S bluez-utils
+
+modprobe btusb
+
+systemctl enable bluetooth
+systemctl start bluetooth
+
+
+# multitouch trackpad
+
+pacman -S xf86-input-synaptics
+# disable SoftButtonAreas section, thinkpad has three real buttons
+# /usr/share/X11/xorg.conf.d
+
+pacaur -S libinput-gestures
+usermod -a -G input myusername
+echo "exec libinput-gestures-setup start" >> ~/.config/i3/config
+
+# firegestures supports three finger swipe forward / back while browsing
+# http://www.xuldev.org/firegestures/

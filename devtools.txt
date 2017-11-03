@@ -1,0 +1,62 @@
+# utilities
+
+pacman -S tree
+pacman -S the_silver_searcher
+pacman -S ranger
+pacman -S xclip
+pacman -S pv
+pacman -S openssh
+pacman -S smbclient
+pacman -S multitail
+pacman -S jshon
+pacman -S bc
+pacman -S gnuplot
+pacman -S testdisk
+
+# monitoring
+
+pacman -S htop
+pacman -S nmap
+pacman -S tcpdump
+pacman -S jnettop
+pacman -S sysstat
+pacman -S dstat
+pacman -S dnsutils
+pacman -S traceroute
+
+# dev
+
+pacman -S clang
+pacman -S ruby
+pacman -S python-pip
+pacman -S lua
+pacman -S nodejs
+pacman -S go
+pacman -S npm
+pacman -S rustup
+
+# language specific
+
+rustup toolchain install nightly
+
+gem install gist
+
+npm i -g underscore-cli
+npm i -g json
+npm i -g xml2json-command
+npm i -g hostile
+npm i -g http-server
+
+go get github.com/jehiah/json2csv
+
+# virtualization
+
+pacman -S virtualbox
+pacman -S virtualbox-host-modules-arch
+modprobe vboxdrv
+
+# cloud
+
+pacman -S s3cmd
+pacman -S python2-magic
+
