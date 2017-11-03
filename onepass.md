@@ -1,19 +1,24 @@
-# dropbox
-pacaur -S dropbox dropbox-cli
-dropbox-cli start
+dropbox
 
-# 1password local shared vaults
-pacaur -S gonepass-git
+    pacaur -S dropbox dropbox-cli
+    dropbox-cli start
 
-# 1password.com
-pacaur -S 1password-cli
+1password local shared vaults
 
-# verify binary signature
+    pacaur -S gonepass-git
 
-# manually
-keybase pgp verify -d op.sig -S 1password -i op
+1password.com
 
-# using gpg integration
-keybase follow 1password
-keybase pgp pull 1password
+    pacaur -S 1password-cli
+
+## verify binary signature
+
+manually
+
+    keybase pgp verify -d op.sig -S 1password -i op
+
+using gpg integration
+
+    keybase follow 1password
+    keybase pgp pull 1password
 
