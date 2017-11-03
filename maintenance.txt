@@ -1,0 +1,8 @@
+# archlinux maintenance operations
+
+# install new updates
+pacaur -Syu
+
+# clean up packages
+pacaur -Sc
+
