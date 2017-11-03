@@ -13,3 +13,9 @@ notes from archlinux installation on thinkpad yoga x1
 * devtools.txt - short list of things to install for development
 * packages.txt - raw output from `pacman -Qet`
 * maintenance.txt - regular maintenance operations
+
+## config directory
+
+attempt at keeping a clean copy of important system configuration
+
+`home` is user home, anything named `dot.whatever` would need to be renamed to `.whatever`

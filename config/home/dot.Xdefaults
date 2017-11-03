@@ -1,0 +1,54 @@
+! Appearance
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+
+! background
+urxvt.foreground: gray
+urxvt*depth: 32
+!urxvt.background: black
+!urxvt*background: rgba:0000/0000/0200/c800
+urxvt*transparent: true
+urxvt*shading: 10
+
+
+! Font
+!urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
+!urxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=13:weight=bold
+urxvt.font: xft:xos4 Terminus:pixelsize=22
+urxvt.boldFont: xft:xos4 Terminus:pixelsize=22:weight=bold
+!urxvt.letterSpace: -1
+
+! Larger history limit
+urxvt.saveLines: 1000000
+
+! Perl extensions
+URxvt.perl-ext-common: default,matcher
+
+! Open urls and files with left click
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.pattern.2:  \\B(/\\S+?):(\\d+)(?=:|$)
+URxvt.matcher.launcher.2: gvim +$2 $1
+URxvt.colorUL: #4682B4
+
+! Dracula
+! https://github.com/dracula/base16-dracula-scheme/blob/master/dracula.yaml
+URxvt.colorBD: rgb:ff/ff/ff
+
+URxvt.color0:  rgb:28/29/36
+URxvt.color1:  rgb:3A/3C/4E
+URxvt.color2:  rgb:4D/4F/68
+URxvt.color3:  rgb:62/64/83
+URxvt.color4:  rgb:62/D6/E8
+URxvt.color5:  rgb:E9/E9/F4
+URxvt.color6:  rgb:F1/F2/F8
+URxvt.color7:  rgb:F7/F7/FB
+URxvt.color8:  rgb:EA/51/B2
+URxvt.color9:  rgb:B4/5B/CF
+URxvt.color10: rgb:00/F7/69
+URxvt.color11: rgb:EB/FF/87
+URxvt.color12: rgb:A1/EF/E4
+URxvt.color13: rgb:62/D6/E8
+URxvt.color14: rgb:B4/5B/CF
+URxvt.color15: rgb:00/F7/69
