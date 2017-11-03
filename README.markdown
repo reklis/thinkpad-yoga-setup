@@ -19,3 +19,10 @@ notes from archlinux installation on thinkpad yoga x1
 attempt at keeping a clean copy of important system configuration
 
 `home` is user home, anything named `dot.whatever` would need to be renamed to `.whatever`
+
+
+## todo
+
+* wwan radio config
+* fingerprint reader
+* hi dpi tweaks
