@@ -164,8 +164,6 @@ systemctl start bluetooth
 # multitouch trackpad
 
 pacman -S xf86-input-synaptics
-# disable SoftButtonAreas section, thinkpad has three real buttons
-# /usr/share/X11/xorg.conf.d
 
 pacaur -S libinput-gestures
 usermod -a -G input myusername
@@ -173,3 +171,8 @@ echo "exec libinput-gestures-setup start" >> ~/.config/i3/config
 
 # firegestures supports three finger swipe forward / back while browsing
 # http://www.xuldev.org/firegestures/
+
+# configure SoftButtonAreas
+cp /usr/share/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics-touchpad.conf
+gvim /etc/X11/xorg.conf.d/70-synaptics-touchpad.conf
+
