@@ -7,12 +7,12 @@ notes from archlinux installation on thinkpad yoga x1
 
 ### overview
 
-* hardware.txt - output from `lspci` and `lsusb` to compare with your own for drivers and firmware
-* setup.txt - basic run down of the install, start here after you have archlinux booting
-* onepass.md - dropbox / keybase / 1password setup
-* devtools.txt - short list of things to install for development
-* packages.txt - raw output from `pacman -Qet`
-* maintenance.txt - regular maintenance operations
+* [hardware.txt](hardware.txt) - output from `lspci` and `lsusb` to compare with your own for drivers and firmware
+* [setup.txt](setup.txt) - basic run down of the install, start here after you have archlinux booting
+* [onepass.md](onepass.md) - dropbox / keybase / 1password setup
+* [devtools.txt](devtools.txt) - short list of things to install for development
+* [packages.txt](packages.txt) - raw output from `pacman -Qet`
+* [maintenance.txt](maintenance.txt) - regular maintenance operations
 
 ## config directory
 
