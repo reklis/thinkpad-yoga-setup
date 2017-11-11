@@ -75,6 +75,8 @@ pacman -S ttf-ubuntu-font-family
 pacman -S ttf-liberation
 pacman -S ttf-dejavu
 pacman -S awesome-terminal-fonts
+pacman -S powerline-fonts
+pacman -S ttf-font-awesome
 
 # display manager / gui login
 
