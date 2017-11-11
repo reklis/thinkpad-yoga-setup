@@ -49,11 +49,22 @@ npm i -g http-server
 
 go get github.com/jehiah/json2csv
 
-# virtualization
+# virtualbox
 
 pacman -S virtualbox
 pacman -S virtualbox-host-modules-arch
 modprobe vboxdrv
+
+# docker
+
+sudo tee /etc/modules-load.d/loop.conf <<< "loop"
+sudo modprobe loop
+pacman -S docker
+gpasswd -a myuser docker
+newgrp docker
+systemctl start docker
+docker info
+
 
 # cloud
 
