@@ -11,18 +11,30 @@ pacman -S multitail
 pacman -S jshon
 pacman -S bc
 pacman -S gnuplot
+
+# disk
+
 pacman -S testdisk
+gpg --receive-keys F042F5CDB0A6EC6ACB80A829CACDA4B54202FA2F
+pacaur -S duc
+
 
 # monitoring
 
 pacman -S htop
-pacman -S nmap
-pacman -S tcpdump
-pacman -S jnettop
 pacman -S sysstat
 pacman -S dstat
+pacman -S jnettop
+
+# networking
+
+pacman -S nmap
+pacman -S tcpdump
 pacman -S dnsutils
 pacman -S traceroute
+pacman -S net-tools
+pacman -S openbsd-netcat
+pacman -S socat
 
 # dev
 
@@ -65,9 +77,21 @@ newgrp docker
 systemctl start docker
 docker info
 
+# PyYaml was already installed by pip and conflicted with pacman
+sudo pip uninstall pyyaml
+pacaur -S docker-compose
+
 
 # cloud
 
 pacman -S s3cmd
 pacman -S python2-magic
+
+
+# remote desktop
+
+pacaur -S freerdp
+pacaur -S tigervnc-viewer
+
+
 
