@@ -6,3 +6,5 @@ pacaur -Syu
 # clean up packages
 pacaur -Sc
 
+# find package that provides missing command
+pacman -Qo /bin/netstat
