@@ -5,8 +5,6 @@ pacman -S the_silver_searcher
 pacman -S ranger
 pacman -S xclip
 pacman -S pv
-pacman -S openssh
-pacman -S smbclient
 pacman -S multitail
 pacman -S jshon
 pacman -S bc
@@ -28,6 +26,9 @@ pacman -S jnettop
 
 # networking
 
+pacman -S openssh
+pacman -S smbclient
+pacman -S nfs-utils
 pacman -S nmap
 pacman -S tcpdump
 pacman -S dnsutils
