@@ -152,9 +152,14 @@ bindsym XF86AudioMicMute exec /usr/bin/pactl set-source-mute 1 toggle
 bindsym XF86MonBrightnessDown exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
 bindsym XF86MonBrightnessUp exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
+# external display settings
 bindsym XF86Display exec xrandr --auto --output HDMI-1 --mode 2560x1080 --above eDP-1
 
+# Gear/Cog Function Key launches browser
 bindsym XF86Tools exec firefox
+
+# PrtSc Function Key toggles touchpad
+bindsym Print exec [[ "1" == "$(xinput --list-props 13 | grep -i enabled | grep -o '[1|0]$')" ]] && xinput disable 13 || xinput enable 13
 
 # screen lock on keyboard shortcut
 bindsym $mod+Delete exec "i3lock -e -f -i ~/.config/i3/lock.png"
