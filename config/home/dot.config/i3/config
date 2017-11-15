@@ -146,17 +146,15 @@ bindsym $mod+r mode "resize"
 bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute 0 toggle
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 '+5%'
-bindsym XF86AudioMicMute exec /usr/bin/pactl set-sink-input-mute 0
+bindsym XF86AudioMicMute exec /usr/bin/pactl set-source-mute 1 toggle
 
 # display brightness control
 bindsym XF86MonBrightnessDown exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
 bindsym XF86MonBrightnessUp exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
-# unused
-# 245 XF86Bluetooth
-# 179 XF86Tools
-
 bindsym XF86Display exec xrandr --auto --output HDMI-1 --mode 2560x1080 --above eDP-1
+
+bindsym XF86Tools exec firefox
 
 # screen lock on keyboard shortcut
 bindsym $mod+Delete exec "i3lock -e -f -i ~/.config/i3/lock.png"
