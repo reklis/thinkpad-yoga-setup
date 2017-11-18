@@ -17,6 +17,25 @@ font pango:Terminus 12
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# use colors from ~/.Xresources
+#set_from_resource $<name> <resource_name> <fallback>
+set_from_resource $black  i3wm.color0  #000000
+set_from_resource $red    i3wm.color1  #FF5555
+set_from_resource $green  i3wm.color2  #50FA7B
+set_from_resource $yellow i3wm.color3  #F1FA8C
+set_from_resource $purple i3wm.color4  #BD93F9
+set_from_resource $pink   i3wm.color5  #FF79C6
+set_from_resource $cyan   i3wm.color6  #8BE9FD
+#set_from_resource $black  i3wm.color7  #BFBFBF
+#set_from_resource $black  i3wm.color8  #4D4D4D
+#set_from_resource $black  i3wm.color9  #FF6E67
+#set_from_resource $black  i3wm.color10 #5AF78E
+#set_from_resource $black  i3wm.color11 #F4F99D
+#set_from_resource $black  i3wm.color12 #CAA9FA
+#set_from_resource $black  i3wm.color13 #FF92D0
+#set_from_resource $black  i3wm.color14 #9AEDFE
+#set_from_resource $black  i3wm.color15 #E6E6E6
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
