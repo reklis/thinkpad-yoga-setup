@@ -1,6 +1,9 @@
 ! Appearance
 urxvt.termName: rxvt-unicode
 urxvt.scrollBar: false
+urxvt.scrollTtyOutput: false
+urxvt.scrollWithBuffer: true
+urxvt.scrollTtyKeypress: true
 
 ! background
 urxvt.foreground: gray
