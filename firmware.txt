@@ -1,0 +1,43 @@
+# pacman -S fwupd
+
+Intel AMT (unprovisioned)
+  DeviceId:             /dev/mei
+  Guid:                 2800f812-b7b4-2d4b-aca8-46e0ff65814c
+  Summary:              Hardware and firmware technology for remote out-of-band management
+  Plugin:               amt
+  Flags:                internal|registered
+  Vendor:               Intel Corporation
+  Version:              11.6.29
+  VersionBootloader:    11.6.29
+  Icon:                 computer
+  Created:              2017-12-04
+
+UEFI Device Firmware
+  DeviceId:             UEFI-1ccf85a8-c3fb-4720-b762-a58edceaec43-dev0
+  Guid:                 1ccf85a8-c3fb-4720-b762-a58edceaec43
+  Plugin:               uefi
+  Flags:                internal|updatable|require-ac|registered|needs-reboot
+  Version:              182.29.3287
+  VersionLowest:        0.0.1
+  Icon:                 audio-card
+  Created:              2017-12-04
+
+UEFI Device Firmware
+  DeviceId:             UEFI-7ad89c51-1c62-4e7e-ae80-50a9ca53a70a-dev0
+  Guid:                 7ad89c51-1c62-4e7e-ae80-50a9ca53a70a
+  Plugin:               uefi
+  Flags:                internal|updatable|require-ac|registered|needs-reboot
+  Version:              0.1.11
+  VersionLowest:        0.0.1
+  Icon:                 audio-card
+  Created:              2017-12-04
+
+20JDCTO1WW System Firmware
+  DeviceId:             UEFI-9ca89fa5-ce05-47ac-bdf3-5b0b6f21d07a-dev0
+  Guid:                 9ca89fa5-ce05-47ac-bdf3-5b0b6f21d07a
+  Plugin:               uefi
+  Flags:                internal|updatable|require-ac|registered|needs-reboot
+  Version:              0.1.15
+  VersionLowest:        0.1.0
+  Icon:                 computer
+  Created:              2017-12-04
