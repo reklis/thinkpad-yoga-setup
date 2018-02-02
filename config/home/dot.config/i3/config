@@ -107,7 +107,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -182,17 +182,23 @@ bindsym Print exec [[ "1" == "$(xinput --list-props 13 | grep -i enabled | grep 
 
 # screen lock on keyboard shortcut
 bindsym $mod+Delete exec "i3lock -e -f -i ~/.config/i3/lock.png"
+
 # auto lock after 3 minutes
-exec --no-startup-id xautolock -secure -time 3 -locker "i3lock -e -f -i ~/.config/i3/lock.png"
+#exec --no-startup-id xautolock -secure -time 3 -locker "i3lock -e -f -i ~/.config/i3/lock.png"
+
 # listen for screen saver locking
 exec --no-startup-id xss-lock -l -- i3lock -e -f -i ~/.config/i3/lock.png
 
-# bottom status bar
-bar {
-  font pango:FontAwesome 12:style=Regular
-  status_command i3status
-  # ~/.config/i3status/config
-}
+# default status bar
+#bar {
+#  font pango:FontAwesome 12:style=Regular
+#  status_command i3status
+#  # ~/.config/i3status/config
+#}
+
+#Polybar
+# ~/.config/polybar/config
+exec_always --no-startup-id killall polybar; polybar bottom &
 
 # enable double buffering window compositor
 exec --no-startup-id compton
