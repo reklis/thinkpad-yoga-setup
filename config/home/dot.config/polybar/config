@@ -90,9 +90,9 @@ interval = 1.0
 
 time = %H:%M:%S
 
-;format =  <label>
+format = %{T1} <label>
 format-prefix = " "
-format-foreground = ${colors.orange}
+format-foreground = ${colors.white}
 
 label = %time%
 
@@ -104,7 +104,7 @@ interval = 1.0
 date = %Y-%d-%m
 
 format = %{T1} <label>
-format-foreground = ${colors.orange}
+format-foreground = ${colors.white}
 format-prefix = " "
 
 label = %date%
