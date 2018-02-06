@@ -45,7 +45,8 @@ foreground = ${colors.foreground}
 
 ;spacing = 3
 
-modules-left = powermenu i3 xwindow
+;modules-left = powermenu i3 xwindow
+modules-left = powermenu i3
 modules-center = calendar clock
 modules-right = volume filesystem wireless-network wired-network battery
 
