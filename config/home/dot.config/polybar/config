@@ -102,7 +102,7 @@ type = internal/date
 
 interval = 1.0
 
-date = %Y-%d-%m
+date = %Y-%m-%d
 
 format = %{T1} <label>
 format-foreground = ${colors.white}
