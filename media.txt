@@ -1,0 +1,5 @@
+alias aur=pacaur
+
+aur -S vlc
+aur -S libva-intel-driver
+aur -S ttf-freefont

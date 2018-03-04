@@ -13,6 +13,7 @@ notes from archlinux installation on thinkpad yoga x1
 * [security.txt](security.txt) - security related notes, firewall, crypto
 * [packages.txt](packages.txt) - raw output from `pacman -Qet`
 * [maintenance.txt](maintenance.txt) - regular maintenance operations
+* [media.txt](media.txt) - multimedia software and settings
 
 ## config directory
 
