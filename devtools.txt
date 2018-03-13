@@ -43,10 +43,11 @@ pacman -S clang
 pacman -S ruby
 pacman -S python-pip
 pacman -S lua
-pacman -S nodejs
 pacman -S go
+pacman -S nodejs
 pacman -S npm
 pacman -S rustup
+pacman -S gitg
 
 # language specific
 
