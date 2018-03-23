@@ -23,6 +23,7 @@ pacman -S htop
 pacman -S sysstat
 pacman -S dstat
 pacman -S jnettop
+pacman -S perf
 
 # networking
 
