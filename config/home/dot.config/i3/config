@@ -159,14 +159,14 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # pulse audio volume control
-bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute 0 toggle
-bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 '-5%'
-bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 '+5%'
-bindsym XF86AudioMicMute exec /usr/bin/pactl set-source-mute 1 toggle
+bindsym XF86AudioMute exec --no-startup-id /usr/bin/pactl set-sink-mute 0 toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pactl set-sink-volume 0 '-5%'
+bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pactl set-sink-volume 0 '+5%'
+bindsym XF86AudioMicMute exec --no-startup-id /usr/bin/pactl set-source-mute 1 toggle
 
 # display brightness control
-bindsym XF86MonBrightnessDown exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
-bindsym XF86MonBrightnessUp exec echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) - 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
 # external display settings
 # bindsym XF86Display exec xrandr --auto --output HDMI-1 --above eDP-1
