@@ -169,8 +169,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id echo $(expr $(cat /sys/class/
 bindsym XF86MonBrightnessUp exec --no-startup-id echo $(expr $(cat /sys/class/backlight/intel_backlight/brightness) + 10) | sudo tee /sys/class/backlight/intel_backlight/brightness
 
 # external display settings
-# bindsym XF86Display exec xrandr --auto --output HDMI-1 --above eDP-1
-bindsym XF86Display exec --no-startup-id "xrandr --auto --output HDMI-1 --right-of eDP-1; xrandr --auto --output DP-2 --above eDP-1; feh --bg-fill --randomize ~/.wallpaper/*"
+bindsym XF86Display exec --no-startup-id ~/.screenlayout/default.sh
 
 # Gear/Cog Function Key launches browser
 bindsym XF86Tools exec firefox
@@ -202,7 +201,7 @@ exec_always --no-startup-id killall polybar; polybar bottom &
 exec --no-startup-id compton
 
 # select a random wallpaper
-exec --no-startup-id feh --bg-fill --randomize ~/.wallpaper/*
+#exec --no-startup-id feh --bg-fill --randomize ~/.wallpaper/*
 
 # turn on multitouch gestures
 exec --no-startup-id libinput-gestures-setup start
