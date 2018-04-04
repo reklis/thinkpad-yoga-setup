@@ -190,15 +190,15 @@ bindsym $mod+Delete exec "i3lock -e -f -i ~/.config/i3/lock.png"
 exec --no-startup-id xss-lock -l -- i3lock -e -f -i ~/.config/i3/lock.png
 
 # default status bar
-#bar {
-#  font pango:FontAwesome 12:style=Regular
-#  status_command i3status
-#  # ~/.config/i3status/config
-#}
+bar {
+  font pango:FontAwesome 12:style=Regular
+  status_command i3status
+  # ~/.config/i3status/config
+}
 
 #Polybar
 # ~/.config/polybar/config
-exec_always --no-startup-id killall polybar; polybar bottom &
+#exec_always --no-startup-id killall polybar; polybar bottom &
 
 # enable double buffering window compositor
 exec --no-startup-id compton
