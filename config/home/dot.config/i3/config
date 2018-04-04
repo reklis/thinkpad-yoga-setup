@@ -43,6 +43,9 @@ set_from_resource $cyan   i3wm.color6  #8BE9FD
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Turn off mouse warping when using multiple monitors
+mouse_warping none
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
