@@ -145,6 +145,10 @@ pacaur -S xss-lock
 # lock on suspend
 echo "ExecStart=/usr/bin/loginctl lock-sessions" >> /etc/systemd/sleep.conf
 
+# desktop notifications
+
+pacman -S libnotify
+pacman -S dunst
 
 # webcam
 
