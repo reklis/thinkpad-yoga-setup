@@ -89,7 +89,7 @@ type = internal/date
 
 interval = 1.0
 
-time = %H:%M:%S
+time = %H:%M
 
 format = %{T1} <label>
 format-prefix = " "
@@ -204,24 +204,31 @@ animation-charging-framerate = 750
 type = internal/i3
 format = <label-state> <label-mode>
 
+label-mode = %mode%
+label-mode-padding = 2
+;label-mode-background = #e60053
+
 index-sort = true
 wrapping-scroll = true
 
 label-focused = %index%
 label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.foreground-alt}
-label-focused-padding = 1
+label-focused-background = ${colors.foreground}
+label-focused-underline = ${colors.blue}
+label-focused-padding = 3
 
 label-unfocused = %index%
-label-unfocused-padding = 1
+label-unfocused-padding = 3
+label-unfocused-underline = ${colors.blue}
 
 label-urgent = %index%
 label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.red}
-label-urgent-padding = 1
+label-urgent-background = ${colors.magenta}
+label-urgent-padding = 3
 
 label-visible = %index%
-label-visible-padding = 1
+label-visible-padding = 3
+label-visible-underline = ${colors.foreground-alt}
 
 [module/wireless-network]
 type = internal/network

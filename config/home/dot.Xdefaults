@@ -13,6 +13,11 @@ urxvt*depth: 32
 urxvt*transparent: true
 urxvt*shading: 10
 
+!  keyboard shortcuts
+!ctrl+l to clear screen
+URxvt.keysym.Control-l: command:\033c
+!alt+s to search, arrow up and down for previous/next match
+!https://www.mankier.com/1/urxvt-searchable-scrollback
 
 ! Font
 !urxvt.font: xft:DejaVu Sans Mono:pixelsize=13
@@ -35,21 +40,37 @@ URxvt.colorUL: #4682B4
 
 ! Dracula
 ! https://github.com/dracula/base16-dracula-scheme/blob/master/dracula.yaml
-URxvt.colorBD: rgb:ff/ff/ff
+URxvt.colorBD: #ffffff
 
-URxvt.color0:  rgb:28/29/36
-URxvt.color1:  rgb:3A/3C/4E
-URxvt.color2:  rgb:4D/4F/68
-URxvt.color3:  rgb:62/64/83
-URxvt.color4:  rgb:62/D6/E8
-URxvt.color5:  rgb:E9/E9/F4
-URxvt.color6:  rgb:F1/F2/F8
-URxvt.color7:  rgb:F7/F7/FB
-URxvt.color8:  rgb:EA/51/B2
-URxvt.color9:  rgb:B4/5B/CF
-URxvt.color10: rgb:00/F7/69
-URxvt.color11: rgb:EB/FF/87
-URxvt.color12: rgb:A1/EF/E4
-URxvt.color13: rgb:62/D6/E8
-URxvt.color14: rgb:B4/5B/CF
-URxvt.color15: rgb:00/F7/69
+! black
+URxvt.color0:     #000000
+URxvt.color8:     #4D4D4D
+
+! red
+URxvt.color1:     #FF5555
+URxvt.color9:     #FF6E67
+
+! green
+URxvt.color2:     #50FA7B
+URxvt.color10:    #5AF78E
+
+! yellow
+URxvt.color3:     #F1FA8C
+URxvt.color11:    #F4F99D
+
+! blue
+URxvt.color4:     #BD93F9
+URxvt.color12:    #CAA9FA
+
+! magenta
+URxvt.color5:     #FF79C6
+URxvt.color13:    #FF92D0
+
+! cyan
+URxvt.color6:     #8BE9FD
+URxvt.color14:    #9AEDFE
+
+! white
+URxvt.color7:     #BFBFBF
+URxvt.color15:    #E6E6E6
+

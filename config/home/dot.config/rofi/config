@@ -1,0 +1,4 @@
+rofi.combi-modi:    window,drun,ssh
+rofi.theme:         dracula
+rofi.font:          xos4 Terminus 24
+rofi.modi:          combi

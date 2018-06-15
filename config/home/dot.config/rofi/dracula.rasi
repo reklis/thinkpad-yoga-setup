@@ -1,0 +1,96 @@
+/*
+ * ROFI Dracula
+ *
+ * Based on https://draculatheme.com
+ *
+ */
+
+* {
+  black:      #000000;
+  red:        #FF5555;
+  green:      #50FA7B;
+  yellow:     #F1FA8C;
+  blue:       #BD93F9;
+  cyan:       #62D6E8;
+  mangenta:   #FF92D0;
+  emphasis:   #4D4D4D;
+  text:       #FF92D0;
+  text-alt:   #BFBFBF;
+  fg:         #00F769;
+  bg:         #282A36;
+
+  spacing: 0;
+  background-color: transparent;
+
+  font: "xos4 Terminus 24";
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  fullscreen: true;
+  background-color: #282c34dd;
+}
+
+mainbox {
+  padding: 25% 25%;
+}
+
+inputbar {
+  margin: 0px 0px 20px 0px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @cyan;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #50FA7B; /* green */
+  border-radius: 3px;
+}
+
+element selected {
+  background-color: @emphasis;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
