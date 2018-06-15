@@ -3,6 +3,8 @@
 sudo pacman -S firewalld
 sudo systemctl enable firewalld --now
 
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7
+
 # dropbox
 
 pacaur -S dropbox dropbox-cli
