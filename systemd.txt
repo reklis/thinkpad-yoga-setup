@@ -1,0 +1,7 @@
+# install check battery script as user service
+
+cd ~/.config/systemd/user
+systemctl --user start check-battery.timer
+systemctl --user enable check-battery.timer
+
+

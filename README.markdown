@@ -10,6 +10,7 @@ notes from archlinux installation on thinkpad yoga x1
 * [hardware.txt](hardware.txt) - output from `lspci` and `lsusb` to compare with your own for drivers and firmware
 * [setup.txt](setup.txt) - basic run down of the install, start here after you have archlinux booting
 * [devtools.txt](devtools.txt) - short list of things to install for development
+* [systemd.txt](systemd.txt) - systemd service configuration
 * [security.txt](security.txt) - security related notes, firewall, crypto
 * [packages.txt](packages.txt) - raw output from `pacman -Qet`
 * [maintenance.txt](maintenance.txt) - regular maintenance operations
