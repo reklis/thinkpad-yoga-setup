@@ -16,6 +16,7 @@ pacman -S acpid
 # gui stuff
 pacman -S gvim
 pacman -S dmenu
+pacman -S rofi
 pacman -S rxvt-unicode
 pacman -S rxvt-unicode-terminfo
 pacman -S xorg
@@ -184,4 +185,6 @@ echo "exec libinput-gestures-setup start" >> ~/.config/i3/config
 # configure SoftButtonAreas
 cp /usr/share/X11/xorg.conf.d/70-synaptics.conf /etc/X11/xorg.conf.d/70-synaptics-touchpad.conf
 gvim /etc/X11/xorg.conf.d/70-synaptics-touchpad.conf
+
+
 
